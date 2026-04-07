@@ -1,12 +1,12 @@
 package risk
 
-import "github.com/ayo-69/trading-bot/internal/exchange"
+import "github.com/naiih001/trading-bot/internal/exchange"
 
 type Manager struct {
 	RiskFration float64
 }
 
-func NewManger(fraction float64) *Manager {
+func NewManager(fraction float64) *Manager {
 	return &Manager{RiskFration: fraction}
 }
 

@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/ayo-69/trading-bot/internal/data"
-	"github.com/ayo-69/trading-bot/internal/types"
+	"github.com/naiih001/trading-bot/internal/data"
+	"github.com/naiih001/trading-bot/internal/types"
 )
 
 type SimulatedExchange struct {

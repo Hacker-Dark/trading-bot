@@ -7,12 +7,12 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/ayo-69/trading-bot/internal/backtest"
-	"github.com/ayo-69/trading-bot/internal/data"
-	"github.com/ayo-69/trading-bot/internal/exchange"
-	"github.com/ayo-69/trading-bot/internal/risk"
-	"github.com/ayo-69/trading-bot/internal/strategy"
-	"github.com/ayo-69/trading-bot/internal/types"
+	"github.com/naiih001/trading-bot/internal/backtest"
+	"github.com/naiih001/trading-bot/internal/data"
+	"github.com/naiih001/trading-bot/internal/exchange"
+	"github.com/naiih001/trading-bot/internal/risk"
+	"github.com/naiih001/trading-bot/internal/strategy"
+	"github.com/naiih001/trading-bot/internal/types"
 	"github.com/joho/godotenv"
 )
 
@@ -32,7 +32,7 @@ func main() {
 
 	exch := exchange.NewSimulatedExchange(10000, "BTCUSDT")
 	strat := strategy.NewSMACrossover(10, 30)
-	rm := risk.NewManger(0.01)
+	rm := risk.NewManager(0.01)
 
 	engine := backtest.NewEngine(exch, strat, rm)
 	equity := engine.Run(candles)

@@ -1,10 +1,10 @@
 package backtest
 
 import (
-	"github.com/ayo-69/trading-bot/internal/data"
-	"github.com/ayo-69/trading-bot/internal/exchange"
-	"github.com/ayo-69/trading-bot/internal/risk"
-	"github.com/ayo-69/trading-bot/internal/strategy"
+	"github.com/naiih001/trading-bot/internal/data"
+	"github.com/naiih001/trading-bot/internal/exchange"
+	"github.com/naiih001/trading-bot/internal/risk"
+	"github.com/naiih001/trading-bot/internal/strategy"
 )
 
 type Engine struct {

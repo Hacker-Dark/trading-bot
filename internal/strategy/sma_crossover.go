@@ -1,7 +1,7 @@
 package strategy
 
 import (
-	"github.com/ayo-69/trading-bot/internal/data"
+	"github.com/naiih001/trading-bot/internal/data"
 	"log"
 )
 
