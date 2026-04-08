@@ -7,20 +7,20 @@ import (
 	"os"
 	"strconv"
 
+	"github.com/joho/godotenv"
 	"github.com/naiih001/trading-bot/internal/backtest"
 	"github.com/naiih001/trading-bot/internal/data"
 	"github.com/naiih001/trading-bot/internal/exchange"
 	"github.com/naiih001/trading-bot/internal/risk"
 	"github.com/naiih001/trading-bot/internal/strategy"
 	"github.com/naiih001/trading-bot/internal/types"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Could not load environment variables")
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file, using environment variables")
 	}
+
 	dataSrcFile := os.Getenv("DATA_SRC_FILE")
 	if dataSrcFile == "" {
 		log.Fatalf("DATA_SRC_FILE environment variable not set")
